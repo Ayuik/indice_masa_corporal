@@ -20,5 +20,9 @@ public class Person {
     public void setWheight(double wheight) {
         this.wheight = wheight;
     }
-    
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
 }
