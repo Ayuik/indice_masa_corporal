@@ -34,5 +34,14 @@ public class ResultMessageTest {
         String message = resultMessage.returnDelgadezLeve(imc);
         assertThat(message, is("Delgadez leve"));
     }
+
+    @Test
+    @DisplayName("Returns peso normal if imc >= 18.5 && imc < 25")
+    void testReturnPesoNormal() {
+        double imc = 17;
+        ResultMessage resultMessage = new ResultMessage();
+        String message = resultMessage.returnPesoNormal(imc);
+        assertThat(message, is("Peso normal"));
+    }
     
 }
