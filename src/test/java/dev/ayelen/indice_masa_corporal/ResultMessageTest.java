@@ -13,7 +13,7 @@ public class ResultMessageTest {
     void testReturnDelgadezSevera() {
         double imc = 11;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnDelgadezSevera();
+        String message = resultMessage.returnDelgadezSevera(imc);
         assertThat(message, is("Delgadez severa"));
     }
     
