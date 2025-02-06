@@ -8,5 +8,6 @@ public class ResultMessage {
         } else {
             return null;
         }
+        
     }
 }

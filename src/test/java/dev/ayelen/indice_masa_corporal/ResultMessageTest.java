@@ -16,5 +16,14 @@ public class ResultMessageTest {
         String message = resultMessage.returnDelgadezSevera(imc);
         assertThat(message, is("Delgadez severa"));
     }
+
+    @Test
+    @DisplayName("Returns delgadez moderada if imc >= 17 && imc >= 16")
+    void testReturnDelgadezModerada() {
+        double imc = 17;
+        ResultMessage resultMessage = new ResultMessage();
+        String message = resultMessage.returnDelgadezModerada(imc);
+        assertThat(message, is("Delgadez moderada"));
+    }
     
 }
