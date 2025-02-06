@@ -10,7 +10,7 @@ public class ResultMessage {
         }
 
         public String returnDelgadezModerada(double imc) {
-            if (imc >= 16 && imc <= 17) {
+            if (imc >= 16 && imc < 17) {
                 return "Delgadez moderada";
             } else {
                 return null;

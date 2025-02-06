@@ -18,12 +18,21 @@ public class ResultMessageTest {
     }
 
     @Test
-    @DisplayName("Returns delgadez moderada if imc >= 17 && imc >= 16")
+    @DisplayName("Returns delgadez moderada if imc < 17 && imc >= 16")
     void testReturnDelgadezModerada() {
         double imc = 17;
         ResultMessage resultMessage = new ResultMessage();
         String message = resultMessage.returnDelgadezModerada(imc);
         assertThat(message, is("Delgadez moderada"));
+    }
+
+    @Test
+    @DisplayName("Returns delgadez leve if imc >= 17 && imc < 18.5")
+    void testReturnDelgadezLeve() {
+        double imc = 17;
+        ResultMessage resultMessage = new ResultMessage();
+        String message = resultMessage.returnDelgadezLeve(imc);
+        assertThat(message, is("Delgadez leve"));
     }
     
 }
