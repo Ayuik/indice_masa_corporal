@@ -8,7 +8,13 @@ public class Person {
         this.wheight = wheight;
         this.height = height;
     }
+    
     public double getHeight() {
         return height;
     }
+
+    public double getWheight() {
+        return wheight;
+    }
+    
 }
