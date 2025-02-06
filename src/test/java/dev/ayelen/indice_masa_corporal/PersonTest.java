@@ -27,8 +27,9 @@ public class PersonTest {
     @DisplayName("Should set wheight")
     void testSetWheight() {
         Person person = new Person(0, 0);
-        double result = person.setWheight(double 53);
-        assertEquals(53, result);
+        person.setWheight(53);
+        double wheight = person.getWheight();
+        assertEquals(53, wheight);
     }
 }
 
