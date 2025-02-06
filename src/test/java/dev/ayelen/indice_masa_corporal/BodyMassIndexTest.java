@@ -14,11 +14,11 @@ public class BodyMassIndexTest {
     void testCalculateBMI() {
         //given
         double wheight = 53;
-        double heght = 1.67;
+        double height = 1.67;
         //when
-        float result = new BodyMassIndex().calculateBMI();
+        double result = new BodyMassIndex().calculateBMI(wheight, height);
         //then
-        assertThat(result, is(19));
+        assertThat(result, is(19.0));
   }
     
 }
