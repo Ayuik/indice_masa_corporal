@@ -13,12 +13,12 @@ public class BodyMassIndexTest {
     @DisplayName("Should calculate BMI")
     void testCalculateBMI() {
         //given
-        double wheight = 53;
-        double height = 1.67;
+        double wheight = 10;
+        double height = 1;
         //when
         double result = new BodyMassIndex().calculateBMI(wheight, height);
         //then
-        assertThat(result, is(19.0));
+        assertThat(result, is(10.0));
   }
     
 }
