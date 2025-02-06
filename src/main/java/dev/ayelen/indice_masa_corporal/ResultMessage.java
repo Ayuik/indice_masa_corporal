@@ -25,4 +25,12 @@ public class ResultMessage {
                 return null;
             }
         }
+
+        public String returnPesoNormal(double imc) {
+            if (imc >= 18.5 && imc < 25) {
+                return "Peso normal";
+            } else {
+                return null;
+            }
+        }
 }
