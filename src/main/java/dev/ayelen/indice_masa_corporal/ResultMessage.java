@@ -57,4 +57,12 @@ public class ResultMessage {
                 return null;
             }
         }
+
+        public String returnObesidadMorbida(double imc) {
+            if (imc >= 40) {
+                return "Obesidad morbida";
+            } else {
+                return null;
+            }
+        }
 }
