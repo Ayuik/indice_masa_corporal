@@ -1,17 +1,16 @@
 package dev.ayelen.indice_masa_corporal;
 
-/**
- * Hello world!
- */
+
 public final class App {
     private App() {
     }
 
-    /**
-     * Says hello to the world.
-     * @param args The arguments of the program.
-     */
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Person person = new Person(53, 1.67);
+        BodyMassIndex bodyMassIndex = new BodyMassIndex();
+        double imc = bodyMassIndex.calculateBMI(person.getWheight(), person.getHeight());
+        ResultMessage resultMessage = new ResultMessage();
+        String message = resultMessage.giveMessage(imc);
+        System.out.println(message);
     }
 }
