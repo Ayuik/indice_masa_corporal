@@ -2,67 +2,35 @@ package dev.ayelen.indice_masa_corporal;
 
 public class ResultMessage {
 
-        public String returnDelgadezSevera(double imc) {
-            if (imc < 16) {
-                return "Delgadez severa";
-            } else {
-                return null;
-            }
-        }   
+    public String giveMessage(double imc) {
 
-        public String returnDelgadezModerada(double imc) {
-            if (imc >= 16 && imc < 17) {
-                return "Delgadez moderada";
-            } else {
-                return null;
-            }
-        }
+        boolean delgadezSevera = imc < 16;
+        boolean delgadezModerada = imc >= 16 && imc < 17;
+        boolean delgadezLeve = imc >= 17 && imc < 18.5;
+        boolean pesoNormal = imc >= 18.5 && imc < 25;
+        boolean sobrepeso = imc >= 25 && imc < 30;
+        boolean obesidadLeve = imc >= 30 && imc < 35;
+        boolean obesidadModerada = imc >= 35 && imc < 40;
+        boolean obesidadMorbida = imc >= 40;
 
-        public String returnDelgadezLeve(double imc) {
-            if (imc >= 17 && imc < 18.5) {
-                return "Delgadez leve";
-            } else {
-                return null;
-            }
-        }
+        if (delgadezSevera)
+            return "Delgadez severa";
+        if (delgadezLeve)
+            return "Delgadez leve";
+        if (delgadezModerada)
+            return "Delgadez moderada";
+        if (pesoNormal)
+            return "Peso normal";
+        if (sobrepeso)
+            return "Sobrepeso";
+        if (obesidadLeve)
+            return "Obesidad leve";
+        if (obesidadModerada)
+            return "Obesidad moderada";
+        if (obesidadMorbida)
+            return "Obesidad morbida";
 
-        public String returnPesoNormal(double imc) {
-            if (imc >= 18.5 && imc < 25) {
-                return "Peso normal";
-            } else {
-                return null;
-            }
-        }
+        return "Valor invalido";
+    }
 
-        public String returnSobrepeso(double imc) {
-            if (imc >= 25 && imc < 30) {
-                return "Sobrepeso";
-            } else {
-                return null;
-            }
-        }
-
-        public String returnObesidadLeve(double imc) {
-            if (imc >= 30 && imc < 35) {
-                return "Obesidad leve";
-            } else {
-                return null;
-            }
-        }
-
-        public String returnObesidadModerada(double imc) {
-            if (imc >= 35 && imc < 40) {
-                return "Obesidad moderada";
-            } else {
-                return null;
-            }
-        }
-
-        public String returnObesidadMorbida(double imc) {
-            if (imc >= 40) {
-                return "Obesidad morbida";
-            } else {
-                return null;
-            }
-        }
 }

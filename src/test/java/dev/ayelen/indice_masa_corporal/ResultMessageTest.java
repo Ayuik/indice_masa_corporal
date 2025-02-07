@@ -13,7 +13,7 @@ public class ResultMessageTest {
     void testReturnDelgadezSevera() {
         double imc = 11;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnDelgadezSevera(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Delgadez severa"));
     }
 
@@ -22,7 +22,7 @@ public class ResultMessageTest {
     void testReturnDelgadezModerada() {
         double imc = 16.8;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnDelgadezModerada(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Delgadez moderada"));
     }
 
@@ -31,7 +31,7 @@ public class ResultMessageTest {
     void testReturnDelgadezLeve() {
         double imc = 17;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnDelgadezLeve(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Delgadez leve"));
     }
 
@@ -40,7 +40,7 @@ public class ResultMessageTest {
     void testReturnPesoNormal() {
         double imc = 23;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnPesoNormal(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Peso normal"));
     }
 
@@ -49,7 +49,7 @@ public class ResultMessageTest {
     void testReturnSobrepeso() {
         double imc = 27;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnSobrepeso(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Sobrepeso"));
     }
 
@@ -58,7 +58,7 @@ public class ResultMessageTest {
     void testReturnObesidadLeve() {
         double imc = 34;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnObesidadLeve(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Obesidad leve"));
     }
 
@@ -67,7 +67,7 @@ public class ResultMessageTest {
     void testReturnObesidadModerada() {
         double imc = 35;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnObesidadModerada(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Obesidad moderada"));
     }
 
@@ -76,7 +76,7 @@ public class ResultMessageTest {
     void testReturnObesidadMorbida() {
         double imc = 43;
         ResultMessage resultMessage = new ResultMessage();
-        String message = resultMessage.returnObesidadMorbida(imc);
+        String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Obesidad morbida"));
     }
     
