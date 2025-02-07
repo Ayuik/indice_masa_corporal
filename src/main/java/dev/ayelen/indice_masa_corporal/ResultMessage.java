@@ -33,4 +33,12 @@ public class ResultMessage {
                 return null;
             }
         }
+
+        public String returnSobrepeso(double imc) {
+            if (imc >= 25 && imc < 30) {
+                return "Sobrepeso";
+            } else {
+                return null;
+            }
+        }
 }
