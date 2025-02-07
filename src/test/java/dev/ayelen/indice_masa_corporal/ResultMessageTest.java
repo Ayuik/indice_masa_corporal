@@ -79,5 +79,5 @@ public class ResultMessageTest {
         String message = resultMessage.giveMessage(imc);
         assertThat(message, is("Obesidad morbida"));
     }
-    
+
 }
