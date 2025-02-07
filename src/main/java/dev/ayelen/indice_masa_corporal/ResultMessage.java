@@ -41,4 +41,12 @@ public class ResultMessage {
                 return null;
             }
         }
+
+        public String returnObesidadLeve(double imc) {
+            if (imc >= 30 && imc < 35) {
+                return "Obesidad leve";
+            } else {
+                return null;
+            }
+        }
 }
