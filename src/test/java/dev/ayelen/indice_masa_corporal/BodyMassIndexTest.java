@@ -12,12 +12,9 @@ public class BodyMassIndexTest {
     @Test
     @DisplayName("Should calculate BMI")
     void testCalculateBMI() {
-        //given
         double wheight = 10;
         double height = 1;
-        //when
         double result = new BodyMassIndex().calculateBMI(wheight, height);
-        //then
         assertThat(result, is(10.0));
   }
     
