@@ -70,5 +70,14 @@ public class ResultMessageTest {
         String message = resultMessage.returnObesidadModerada(imc);
         assertThat(message, is("Obesidad moderada"));
     }
+
+    @Test
+    @DisplayName("Returns obesidad morbida if imc >= 40")
+    void testReturnObesidadMorbida() {
+        double imc = 43;
+        ResultMessage resultMessage = new ResultMessage();
+        String message = resultMessage.returnObesidadMorbida(imc);
+        assertThat(message, is("Obesidad morbida"));
+    }
     
 }
