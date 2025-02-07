@@ -45,12 +45,21 @@ public class ResultMessageTest {
     }
 
     @Test
-    @DisplayName("Returns peso normal if imc >= 25 && imc < 30")
+    @DisplayName("Returns sobrepeso if imc >= 25 && imc < 30")
     void testReturnSobrepeso() {
         double imc = 27;
         ResultMessage resultMessage = new ResultMessage();
         String message = resultMessage.returnSobrepeso(imc);
         assertThat(message, is("Sobrepeso"));
+    }
+
+    @Test
+    @DisplayName("Returns obesidad leve if imc >= 30 && imc < 35")
+    void testReturnObesidadLeve() {
+        double imc = 34;
+        ResultMessage resultMessage = new ResultMessage();
+        String message = resultMessage.returnObesidadLeve(imc);
+        assertThat(message, is("Obesidad leve"));
     }
     
 }
